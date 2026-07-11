@@ -154,6 +154,39 @@
 
   if (current !== 'it') applyLang(current);
 
+  /* ---------- intro "il taglio" ---------- */
+
+  var intro = document.getElementById('intro');
+  if (intro) {
+    var introReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (introReduced) {
+      intro.remove();
+    } else {
+      var introDone = false;
+      var openIntro = function () {
+        intro.classList.add('intro--open');
+        document.documentElement.classList.add('intro-done');
+      };
+      var finishIntro = function () {
+        if (introDone) return;
+        introDone = true;
+        clearTimeout(openTimer);
+        clearTimeout(endTimer);
+        document.documentElement.classList.add('intro-done');
+        document.body.classList.remove('intro-lock');
+        intro.remove();
+        window.removeEventListener('pointerdown', finishIntro, true);
+        window.removeEventListener('keydown', finishIntro, true);
+      };
+      document.documentElement.classList.add('has-intro');
+      document.body.classList.add('intro-lock');
+      var openTimer = setTimeout(openIntro, 1550);
+      var endTimer = setTimeout(finishIntro, 2450);
+      window.addEventListener('pointerdown', finishIntro, true);
+      window.addEventListener('keydown', finishIntro, true);
+    }
+  }
+
   /* ---------- anni e copyright dinamici ---------- */
 
   var nowYear = new Date().getFullYear();
