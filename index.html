@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Archivo:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=2">
+  <link rel="stylesheet" href="css/style.css?v=3">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -42,8 +42,7 @@
     "image": "https://rotenzark.github.io/crescente-parrucchiere/og-image.png",
     "hasMap": "https://www.google.com/maps/search/?api=1&query=Via+Pietro+Borsieri+41%2C+20159+Milano",
     "openingHoursSpecification": [
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "19:00" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:30", "closes": "18:00" }
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "19:30" }
     ]
   }
   </script>
@@ -178,6 +177,15 @@
           </div>
         </aside>
       </div>
+      <div class="gallery-attesa" aria-hidden="true">
+        <div class="g-slot">
+          <svg viewBox="-44 -26 92 52" fill="none" stroke-width="2.4" stroke-linecap="round"><g><line x1="3" y1="-4" x2="46" y2="-9"/><line x1="0" y1="-3" x2="-13" y2="6"/><circle cx="-21" cy="11" r="7" stroke-width="2.2"/></g><g><line x1="3" y1="4" x2="46" y2="9"/><line x1="0" y1="3" x2="-13" y2="-6"/><circle cx="-21" cy="-11" r="7" stroke-width="2.2"/></g><circle class="g-slot-pivot" cx="0" cy="0" r="2"/></svg>
+        </div>
+        <div class="g-slot"></div>
+        <div class="g-slot"></div>
+        <div class="g-slot"></div>
+      </div>
+      <p class="gallery-note" data-i18n="g_note">Le foto della bottega arrivano col primo sopralluogo: lo spazio, qui, è già pronto.</p>
     </section>
 
     <div class="divider" aria-hidden="true"><span></span><span></span><span></span><span></span><span class="d-red"></span><span></span><span></span></div>
@@ -268,12 +276,11 @@
             <caption class="visually-hidden" data-i18n="hours_caption">Orari di apertura</caption>
             <tbody>
               <tr><th scope="row" data-i18n="mon">Lunedì</th><td data-i18n="closed">chiuso</td></tr>
-              <tr><th scope="row" data-i18n="tue_fri">Martedì — Venerdì</th><td>9:00 – 19:00</td></tr>
-              <tr><th scope="row" data-i18n="sat">Sabato</th><td>8:30 – 18:00</td></tr>
+              <tr><th scope="row" data-i18n="tue_sat">Martedì — Sabato</th><td>9:00 – 19:30</td></tr>
               <tr><th scope="row" data-i18n="sun">Domenica</th><td data-i18n="closed2">chiuso</td></tr>
             </tbody>
           </table>
-          <p class="hours-note" data-i18n="hours_note">Meglio una telefonata prima: si fa presto.</p>
+          <p class="hours-note" data-i18n="hours_note">Orario continuato. Si riceve anche su appuntamento: una telefonata basta.</p>
         </div>
         <div class="where">
           <address class="where-address">
@@ -309,6 +316,6 @@
     <p class="footer-legal">© <span data-current-year>2026</span> Crescente Parrucchiere — Via Pietro Borsieri 41, 20159 Milano</p>
   </footer>
 
-  <script src="js/main.js?v=2"></script>
+  <script src="js/main.js?v=3"></script>
 </body>
 </html>
